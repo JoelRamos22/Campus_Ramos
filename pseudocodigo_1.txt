@@ -1,0 +1,164 @@
+# nombre: German Joel Ramos Jaimes
+// pregunta 1
+Funcion ContarHastaDiez
+    Para i <- 1 Hasta 10 Con Paso 1 Hacer
+        Escribir i
+    FinPara
+FinFuncion 
+
+**Pregunta:** ¿Qué hace este pseudocódigo?
+a) Imprime los números del 1 al 9.
+b) Imprime los números del 1 al 10.
+c) Cuenta los números del 1 al 10 sin imprimirlos.
+d) Genera un bucle infinito.
+
+ - Respuesta B  porque tomando del i <- 1 hasta 10 cuenta desde 1 hasta el 10 y termina la impresion en 10 
+
+// pregunta 2
+
+Funcion SumarImpares
+    suma <- 0
+    Para i <- 1 Hasta 20 Con Paso 2 Hacer
+        suma <- suma + i
+    FinPara
+    Escribir suma
+FinFuncion 
+
+Pregunta: ¿Cuál es el resultado final del pseudocódigo?
+a) 100
+b) 110
+c) 200
+d) 210
+
+- Respuesta D 210
+
+
+// Pregunta 3 
+
+FuncionContarHastaCien
+    i <- 1
+    Mientras i <= 100 Hacer
+        Escribir i
+        i <- i + 1
+    FinMientras
+FinFuncion 
+
+
+Pregunta: ¿Qué estructura de control se utiliza para crear el bucle?
+a) Para
+b) Repetir
+c) Mientras
+d) Si
+
+Repuesta C mientras 
+
+// Pregunta 4 
+
+Funcion DivisoresDeSeis
+    Para i <- 1 Hasta 12 Hacer
+        Si 6 mod i = 0 Entonces
+            Escribir i
+        FinSi
+    FinPara
+FinFuncion 
+
+Pregunta: ¿Qué números se imprimirán como resultado?
+a) Todos los números del 1 al 12.
+b) Los números pares del 1 al 12.
+c) Los divisores de 6.
+d) Los múltiplos de 6 hasta 12.
+
+- Respuesta D muestra los multiplos de 6 hasta el 12
+
+// Pregunta 5
+
+Funcion InvertirNumero
+    numero <- 12345
+    invertido <- 0
+    Mientras numero > 0 Hacer
+        invertido <- invertido * 10 + numero mod 10
+        numero <- numero / 10
+    FinMientras
+    Escribir invertido
+FinFuncion 
+
+Pregunta: ¿Qué valor se imprime al final del proceso?
+a) 54321
+b) 12345
+c) 543210
+d) 123450
+
+Repuesta b 
+
+
+// Ejercicio codigo Edades
+
+Algoritmo CalculadoraEstadisticasEdades
+		definir  edad, sumaEdades, cantidadEdades,  Edadmaxima  como entero 
+		Definir promedio Como Real
+		Definir opciones Como Caracter
+		
+		// Inicialización de variables en este caso suma y cantidades
+		sumaEdades <- 0
+		cantidadEdades <- 0
+		
+		// Ingreso de edades por el usuario
+		Escribir "Porfavor digite una edad"
+		Escribir "" 
+		Escribir "( Digite un valor negativo para terminar el almacenamiento )"
+		Escribir "" 
+		
+		// Bucle para repetir la edad
+		repetir
+			Leer edad
+			
+			// Bucle si para la condicion de la edad > 0 
+			si edad >= 0 entonces
+				sumaEdades <- sumaEdades + edad
+				cantidadEdades <- cantidadEdades + 1
+				finsi
+				hasta que edad < 0
+				
+				// Comprobamos que la cantidad de edades no sea igual a 0 
+				si cantidadEdades > 0 entonces
+					// Menú de opciones para el usuario
+					Escribir ""
+					Escribir "Muy bien ahora, porfavor seleccione una opcion"
+					Escribir ""
+					Escribir " Opcion P : ver promedio de edad " 
+					Escribir "" 
+					Escribir "Opcion M : Ver la edad maxima"
+					Leer opciones 
+					
+					// Procesamiento de la opción seleccionada por el usuario
+					Segun opciones hacer 
+						 "P":
+							// Calcular el promedio de las edades
+							promedio <- sumaEdades / cantidadEdades
+							Escribir "El promedio de las edades ingresadas es: ", promedio
+							
+						"M":
+							edadMaximaPermitida <- 130 // lo maximo que puede vivir un humano 
+							
+							// Bucle para encontrar la edad máxima dentro del rango permitido
+							maxEdad <- -1  // Inicializar con un valor menor que cualquier edad posible
+							repetir
+								si edad > 0 y edad < edadMaximaPermitida y edad > Edadmaxima entonces
+									EdadMaxima <- edad
+								finsi
+
+									Escribir "Ingrese una edad (ingrese un valor negativo para terminar) : "
+									Leer edad
+									hasta que edad < 0
+									
+									// Verificar si se encontró alguna edad dentro del rango permitido
+									si EdadMaxima > 0 entonces
+										Escribir "La edad máxima dentro del rango permitido es: ", EdadMaxima
+									sino
+										Escribir "No se encontraron edades dentro del rango permitido."
+										finsi
+								FinSegun
+							FinSi
+							
+FinAlgoritmo
+
