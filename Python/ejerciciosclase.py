@@ -46,4 +46,15 @@ elif comida == 3 :
 else : 
     print (" Lo sentimos no tenemos recomendaciones para ese tipo de comida por el momento, gracias por usar nuestro servicio") 
 
-#
+#Solicita una contraseña y utiliza una declaración if para verificar si coincide con una contraseña predefinida antes de permitir el acceso.
+
+print ("Porfavor escriba su contraseña")
+contraseña = (int(input("CONTRASEÑA : ")))
+
+if contraseña : 
+    print ("Hola usuario Porfavor vuelva a escribir su contraseña")
+    recordatorio = (int(input("Ingrese su contraseña de nuevo")))
+    if contraseña == recordatorio : 
+        print (" Bienvenido de nuevo usuario ")
+    elif contraseña != recordatorio : 
+        print ("su contraseña es incorrecta porfavor intentelo de nuevo")
