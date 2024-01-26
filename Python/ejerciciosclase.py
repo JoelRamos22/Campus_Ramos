@@ -58,3 +58,13 @@ if contraseña :
         print (" Bienvenido de nuevo usuario ")
     elif contraseña != recordatorio : 
         print ("su contraseña es incorrecta porfavor intentelo de nuevo")
+
+#5 verificacion palindromo 
+palabra = (input("Ingresa una palabra porfavor"))
+
+palabra = palabra.lower
+
+if palabra == palabra[::-1] :
+    print ("¡la palabra es palindromo!")
+else :
+    print ("¡la palabra no es un palindromo")
