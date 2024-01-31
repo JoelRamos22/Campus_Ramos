@@ -1,5 +1,6 @@
 
 # empezamos creando la funcion para añadir tareas y definimos una prioridad de 5 
+import time 
 def AñadirTarea(nombre, prioridad=5):
     # usamos la funcion global para poder acceder una lista que este por fuera de las funciones 
     global tareas
@@ -22,6 +23,7 @@ def mostrarTareas():
     tareas_ordenadas = sorted(tareas, key=lambda t: t['prioridad'], reverse=True)
     # imprimimos la lista de tareas 
     for t in tareas_ordenadas:
+        time.sleep(0.95)
         print(f"{t['nombre']} - Prioridad {t['prioridad']}")
 
 def EliminarTarea(nombre):
@@ -31,9 +33,11 @@ def EliminarTarea(nombre):
         # si el nombre digitado es igual a un nombre dentro de la lista de elementos sera borrado 
         if t['nombre'] == nombre:
             tareas.remove(t)
+            time.sleep(0.95)
             print(f"Tarea '{nombre}' eliminada.")
             # imprimiomos el mensaje para confirmar que fue eliminado 
             return
+    time.sleep(0.95)    
     print(f"Error: La tarea '{nombre}' no se encontró.")
     # si no esta simplemente se mostrar un mensaje despues del bucle diciendo que no se encontro la tarea 
 
@@ -42,15 +46,14 @@ def menu():
     while True:
         # opciones 
         print("\nMenú:")
-        print("1. Añadir una nueva tarea.")
-        print("2. Mostrar todas las tareas pendientes.")
-        print("3. Eliminar una tarea.")
-        print("4. Salir del programa.")
+        print ("\n1. Añadir Tarea\n2. Lista de Tareas\n3. Cancelar Tarea\n4. Salir\n")
         opciones = int(input("Seleccione una opción: "))
+        time.sleep(0.95)
         # if para elegir opciones 
         if opciones == 1:
             # que se pregunten las condiciones de cada funcion 
-            nombre = input("Ingrese el nombre de la tarea: ")
+            nombre = input("Ingrese el nombre que desea asignar a la tarea: ")
+            time.sleep(0.90)
             prioridad = int(input("Ingrese la prioridad de la tarea (por defecto 5): "))
             AñadirTarea(nombre, prioridad)
         elif opciones == 2:
@@ -59,9 +62,11 @@ def menu():
             nombre = input("Ingrese el nombre de la tarea a eliminar: ")
             EliminarTarea(nombre)
         elif opciones == 4:
+            time.sleep(0.95)
             print("Saliendo del programa...")
             break
         else:
+            time.sleep(0.95)
             print("Opción no válida. Por favor, intente de nuevo.")
 
 # iniciamos una lista de tareas vacia como lo pide el ejercicio 
