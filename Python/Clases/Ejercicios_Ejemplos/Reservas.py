@@ -1,1 +1,0 @@
-# Objetivo: Desarrollar un sistema básico de gestión de reservas para un hotel que permita añadir y cancelar reservas, verificar disponibilidad de habitaciones, y calcular el costo total de la estancia basado en la duración y el tipo de habitación. El hotel cuenta con diferentes tipos de habitaciones (simple, doble, suite) con distintas tarifas.
