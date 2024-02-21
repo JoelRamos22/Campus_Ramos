@@ -1,0 +1,11 @@
+{
+    "Atletismo": [
+        {
+            "nombre": "carlos",
+            "edad": 23,
+            "residencia": "santander"
+        }
+    ],
+    "Ciclismo": [],
+    "Patinaje": []
+}
