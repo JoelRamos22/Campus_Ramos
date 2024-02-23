@@ -1,0 +1,20 @@
+[
+    {
+        "nombre": "monopoly",
+        "tiempo_por_partida": 100,
+        "cantidad_jugadores": 6,
+        "ejemplares": 8
+    },
+    {
+        "nombre": "calabozos y dragones",
+        "tiempo_por_partida": 410,
+        "cantidad_jugadores": 12,
+        "ejemplares": 2
+    },
+    {
+        "nombre": "Uno",
+        "tiempo_por_partida": 15,
+        "cantidad_jugadores": 5,
+        "ejemplares": 20
+    }
+]
